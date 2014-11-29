@@ -1,6 +1,6 @@
-package ws.pos.promotion;
+package com.water.pos.promotion;
 
-import ws.pos.model.Item;
+import com.water.pos.model.Item;
 
 /**
  * Created by water on 14-11-27.
@@ -15,8 +15,8 @@ public class FullAmountDiscountPromotion implements Promotion {
     @Override
     public Item calculate(final Item item) {
         int discountAmount = item.getAmount() / fullAmount;
-        double subtotal = item.getPrice() * discountRate * discountAmount + (item.getAmount()-discountAmount)*item.getPrice();
-        return new Item(item.getBarcode(), subtotal/item.getAmount(), item.getAmount());
+        double subtotal = item.getGoods().getPrice() * discountRate * discountAmount + (item.getAmount()-discountAmount)*item.getGoods().getPrice();
+        return new Item(item.getGoods().getBarcode(), subtotal/item.getAmount(), item.getAmount());
     }
     @Override
     public String getDescription() {

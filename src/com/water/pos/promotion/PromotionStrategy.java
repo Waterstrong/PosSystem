@@ -1,10 +1,8 @@
-package ws.pos.promotion;
+package com.water.pos.promotion;
 
-import ws.pos.common.Pair;
-import ws.pos.model.Item;
-import ws.pos.parser.DataParser;
-import ws.pos.promotion.DiscountPromotion;
-import ws.pos.promotion.Promotion;
+import com.water.pos.common.Pair;
+import com.water.pos.model.Item;
+import com.water.pos.parser.DataParser;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -18,8 +16,8 @@ public class PromotionStrategy {
     private HashMap<String, List<Promotion>> promotionMap = new HashMap<String, List<Promotion>>();
     public Item calculate(final Item item) {
         Item newItem = item;
-        if (promotionMap.containsKey(item.getBarcode())) {
-            Iterator<Promotion> iter = promotionMap.get(item.getBarcode()).iterator();
+        if (promotionMap.containsKey(item.getGoods().getBarcode())) {
+            Iterator<Promotion> iter = promotionMap.get(item.getGoods().getBarcode()).iterator();
             while (iter.hasNext()) {
                 Promotion promotion = iter.next();
                 newItem = promotion.calculate(newItem);

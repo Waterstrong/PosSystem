@@ -1,4 +1,4 @@
-package ws.pos.common;
+package com.water.pos.common;
 
 import java.lang.reflect.Parameter;
 

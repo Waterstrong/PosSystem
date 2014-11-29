@@ -1,4 +1,4 @@
-package ws.pos.parser;
+package com.water.pos.parser;
 
 import java.io.*;
 import java.util.ArrayList;

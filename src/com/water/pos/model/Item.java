@@ -1,26 +1,30 @@
-package ws.pos.model;
+package com.water.pos.model;
 
 /**
  * Created by water on 14-11-27.
  */
-public class Item extends Goods {
+public class Item {
+    private Goods goods;
     private int amount;
     public Item(String barcode, double price, int amount) {
-        super(barcode, price);
+        goods = new Goods(barcode, price);
         this.amount = amount;
+    }
+    public Goods getGoods() {
+        return goods;
     }
     public int getAmount() {
         return amount;
     }
     public double getSubtotal() {
-        return amount * getPrice();
+        return amount * goods.getPrice();
     }
     public static void printItemTitle() {
-        printGoodsTitle();
+        Goods.printGoodsTitle();
         System.out.print("    购买数量");
     }
     public void printItemDetail() {
-        printGoodsDetail();
+        goods.printGoodsDetail();
         System.out.print("      " + amount);
     }
 }

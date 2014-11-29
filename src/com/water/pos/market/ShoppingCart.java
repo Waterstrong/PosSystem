@@ -1,8 +1,8 @@
-package ws.pos.market;
+package com.water.pos.market;
 
-import ws.pos.model.Item;
-import ws.pos.parser.ShoppingCartParser;
-import ws.pos.promotion.PromotionStrategy;
+import com.water.pos.model.Item;
+import com.water.pos.parser.ShoppingCartParser;
+import com.water.pos.promotion.PromotionStrategy;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -24,11 +24,11 @@ public class ShoppingCart {
             Iterator<Item> iter = itemList.iterator();
             while (iter.hasNext()) {
                 Item item = iter.next();
-                Item existItem = cartMap.get(item.getBarcode());
+                Item existItem = cartMap.get(item.getGoods().getBarcode());
                 int newAount = item.getAmount() + (existItem == null ? 0 : existItem.getAmount());
-                Double price = goodsList.getGoods(item.getBarcode()).getPrice();
-                Item newItem = new Item(item.getBarcode(), price, newAount);
-                cartMap.put(item.getBarcode(), newItem);
+                Double price = goodsList.getGoods(item.getGoods().getBarcode()).getPrice();
+                Item newItem = new Item(item.getGoods().getBarcode(), price, newAount);
+                cartMap.put(item.getGoods().getBarcode(), newItem);
             }
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -46,10 +46,10 @@ public class ShoppingCart {
             beforePromotion += item.getSubtotal();
             Item newItem = promotionStrategy.calculate(item);
             afterPromotion += newItem.getSubtotal();
-            System.out.println(item.getBarcode() + "   " + item.getAmount() + "      " + item.getPrice() + "    " + newItem.getSubtotal());
+            System.out.println(item.getGoods().getBarcode() + "   " + item.getAmount() + "      " + item.getGoods().getPrice() + "    " + newItem.getSubtotal());
         }
         Item totalItem = new Item("ITEM_TOTAL", afterPromotion, 1);
-        afterPromotion = promotionStrategy.calculate(totalItem).getPrice();
+        afterPromotion = promotionStrategy.calculate(totalItem).getGoods().getPrice();
         System.out.println("总计金额（优惠前  优惠后  优惠差价）");
         System.out.println(afterPromotion+"    "+beforePromotion+"  "+afterPromotion+"  "+(beforePromotion-afterPromotion));
     }

@@ -1,7 +1,7 @@
-package ws.pos.parser;
+package com.water.pos.parser;
 
-import ws.pos.common.Pair;
-import ws.pos.promotion.DiscountPromotion;
+import com.water.pos.common.Pair;
+import com.water.pos.promotion.DiscountPromotion;
 
 /**
  * Created by water on 14-11-27.

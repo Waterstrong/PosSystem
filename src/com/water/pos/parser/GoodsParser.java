@@ -1,6 +1,6 @@
-package ws.pos.parser;
+package com.water.pos.parser;
 
-import ws.pos.model.Goods;
+import com.water.pos.model.Goods;
 
 /**
  * Created by water on 14-11-27.

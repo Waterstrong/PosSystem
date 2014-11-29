@@ -1,9 +1,9 @@
-package ws.pos.market;
+package com.water.pos.market;
 
-import ws.pos.promotion.PromotionStrategy;
-import ws.pos.parser.DiscountParser;
-import ws.pos.parser.FullCashBackParser;
-import ws.pos.parser.SecondHalfPriceParser;
+import com.water.pos.promotion.PromotionStrategy;
+import com.water.pos.parser.DiscountParser;
+import com.water.pos.parser.FullCashBackParser;
+import com.water.pos.parser.SecondHalfPriceParser;
 
 
 /**

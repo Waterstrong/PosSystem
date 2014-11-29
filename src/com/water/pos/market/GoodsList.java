@@ -1,7 +1,7 @@
-package ws.pos.market;
+package com.water.pos.market;
 
-import ws.pos.model.Goods;
-import ws.pos.parser.GoodsParser;
+import com.water.pos.model.Goods;
+import com.water.pos.parser.GoodsParser;
 
 import java.util.HashMap;
 import java.lang.String;

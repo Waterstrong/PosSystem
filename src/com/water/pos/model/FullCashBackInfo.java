@@ -1,4 +1,4 @@
-package ws.pos.model;
+package com.water.pos.model;
 
 /**
  * Created by water on 14-11-27.

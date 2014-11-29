@@ -1,6 +1,6 @@
-package ws.pos.promotion;
+package com.water.pos.promotion;
 
-import ws.pos.model.Item;
+import com.water.pos.model.Item;
 
 /**
  * Created by water on 14-11-27.
@@ -14,7 +14,7 @@ public class DiscountPromotion implements Promotion {
 
     @Override
     public Item calculate(final Item item) {
-        return new Item(item.getBarcode(), item.getPrice()*discountRate, item.getAmount());
+        return new Item(item.getGoods().getBarcode(), item.getGoods().getPrice()*discountRate, item.getAmount());
     }
     @Override
     public String getDescription() {

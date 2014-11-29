@@ -1,6 +1,6 @@
-package ws.pos.promotion;
+package com.water.pos.promotion;
 
-import ws.pos.model.Item;
+import com.water.pos.model.Item;
 
 /**
  * Created by water on 14-11-27.
@@ -18,7 +18,7 @@ public class FullCashBackPromotion implements Promotion {
         if (subtotal >= fullCash) {
             subtotal -= cashBack;
         }
-        return new Item(item.getBarcode(), subtotal / item.getAmount(), item.getAmount());
+        return new Item(item.getGoods().getBarcode(), subtotal / item.getAmount(), item.getAmount());
     }
     @Override
     public String getDescription() {
