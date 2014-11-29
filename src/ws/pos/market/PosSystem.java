@@ -1,12 +1,9 @@
 package ws.pos.market;
 
-import ws.pos.market.PromotionStrategy;
-import ws.pos.market.ShoppingCart;
-import ws.pos.market.GoodsList;
+import ws.pos.promotion.PromotionStrategy;
 import ws.pos.parser.DiscountParser;
 import ws.pos.parser.FullCashBackParser;
 import ws.pos.parser.SecondHalfPriceParser;
-import ws.pos.promotion.Promotion;
 
 
 /**

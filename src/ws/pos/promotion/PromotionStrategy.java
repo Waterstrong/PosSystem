@@ -1,4 +1,4 @@
-package ws.pos.market;
+package ws.pos.promotion;
 
 import ws.pos.common.Pair;
 import ws.pos.model.Item;
@@ -66,5 +66,5 @@ public class PromotionStrategy {
 
     }
 
-    public void detach() {}
+    //public void detach() {}
 }

@@ -1,9 +1,8 @@
 package ws.pos.market;
 
-import ws.pos.common.Pair;
-import ws.pos.model.Goods;
 import ws.pos.model.Item;
 import ws.pos.parser.ShoppingCartParser;
+import ws.pos.promotion.PromotionStrategy;
 
 import java.util.HashMap;
 import java.util.Iterator;
