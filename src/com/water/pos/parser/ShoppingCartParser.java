@@ -7,7 +7,7 @@ import com.water.pos.model.Item;
  */
 public class ShoppingCartParser extends DataParser<Item> {
     @Override
-    public Item parse(String line) {
+    protected Item parse(String line) {
         String[] splitResult = line.split("-"); // parse the line as barcode : amount
         Integer amount = 1;
         if (splitResult.length > 1) {

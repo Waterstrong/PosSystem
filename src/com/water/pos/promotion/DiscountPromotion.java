@@ -17,7 +17,7 @@ public class DiscountPromotion implements Promotion {
         return new Item(item.getGoods().getBarcode(), item.getGoods().getPrice()*discountRate, item.getAmount());
     }
     @Override
-    public String getDescription() {
+    public String toString() {
         return discountRate*10 + "折";
     }
 }

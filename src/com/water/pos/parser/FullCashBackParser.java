@@ -8,7 +8,7 @@ import com.water.pos.promotion.FullCashBackPromotion;
  */
 public class FullCashBackParser extends DataParser<Pair<String, FullCashBackPromotion>> {
     @Override
-    public Pair<String, FullCashBackPromotion> parse(String line) {
+    protected Pair<String, FullCashBackPromotion> parse(String line) {
         String[] splitResult = line.split(":"); // parse the line as barcode : fullCash : backCash
         return new Pair<String, FullCashBackPromotion>(splitResult[0],
                 new FullCashBackPromotion(Double.parseDouble(splitResult[1]), Double.parseDouble(splitResult[2])));

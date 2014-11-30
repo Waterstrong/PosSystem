@@ -47,7 +47,7 @@ public class PromotionStrategy {
             e.printStackTrace();
         }
     }
-    public void printGoodsPromotion() {
+    public void showPromotionDetail() {
         Iterator<String> iter = promotionMap.keySet().iterator();
         System.out.println("当前优惠促销活动：");
         System.out.println("商品条码        商品优惠活动");
@@ -57,7 +57,7 @@ public class PromotionStrategy {
             Iterator<Promotion> iterPro = promotionMap.get(barcode).iterator();
             while (iterPro.hasNext()) {
                 Promotion promotion = iterPro.next();
-                System.out.print(promotion.getDescription() + " | ");
+                System.out.print(promotion.toString() + " | ");
             }
             System.out.println();
         }

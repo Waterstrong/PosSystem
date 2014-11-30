@@ -8,5 +8,5 @@ import com.water.pos.model.Item;
  */
 public interface Promotion {
     public Item calculate(final Item item);
-    public String getDescription();
+    public String toString();
 }

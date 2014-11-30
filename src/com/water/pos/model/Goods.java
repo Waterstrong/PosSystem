@@ -16,10 +16,7 @@ public class Goods {
     public double getPrice() {
         return price;
     }
-    public static void printGoodsTitle() {
-        System.out.print("商品条码    商品单价");
-    }
-    public void printGoodsDetail() {
-        System.out.print(barcode+"    "+price);
+    public String toString() {
+        return barcode+"    "+price;
     }
 }

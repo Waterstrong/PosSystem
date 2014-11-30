@@ -12,18 +12,19 @@ import com.water.pos.parser.SecondHalfPriceParser;
 public class PosSystem {
     public static void main (String[] args) {
         GoodsList goodsList = new GoodsList();
-        goodsList.printGoodsList();
+        goodsList.showDetail();
 
         ShoppingCart shoppingCart = new ShoppingCart(goodsList);
-        shoppingCart.printShoppingCart();
+        shoppingCart.showDetail();
 
         PromotionStrategy promotionStrategy = new PromotionStrategy();
         promotionStrategy.attach(new DiscountParser(), "discount_promotion.txt");
         promotionStrategy.attach(new SecondHalfPriceParser(), "second_half_price_promotion.txt");
         promotionStrategy.attach(new FullCashBackParser(), "full_cash_back_promotion.txt");
-        promotionStrategy.printGoodsPromotion();
+        promotionStrategy.showPromotionDetail();
 
-        shoppingCart.applyPrintSettlement(promotionStrategy);
+        KkPos kkPosA = new KkPos();
+        kkPosA.applyPrintSettlement(promotionStrategy, shoppingCart);
 
     }
 }

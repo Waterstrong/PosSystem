@@ -19,12 +19,7 @@ public class Item {
     public double getSubtotal() {
         return amount * goods.getPrice();
     }
-    public static void printItemTitle() {
-        Goods.printGoodsTitle();
-        System.out.print("    购买数量");
-    }
-    public void printItemDetail() {
-        goods.printGoodsDetail();
-        System.out.print("      " + amount);
+    public String toString() {
+        return goods.toString() + "      " + amount;
     }
 }

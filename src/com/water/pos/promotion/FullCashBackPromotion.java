@@ -21,7 +21,7 @@ public class FullCashBackPromotion implements Promotion {
         return new Item(item.getGoods().getBarcode(), subtotal / item.getAmount(), item.getAmount());
     }
     @Override
-    public String getDescription() {
+    public String toString() {
         return "満" + fullCash + "返" + cashBack;
     }
 }

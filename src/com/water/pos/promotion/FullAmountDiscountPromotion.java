@@ -19,7 +19,7 @@ public class FullAmountDiscountPromotion implements Promotion {
         return new Item(item.getGoods().getBarcode(), subtotal/item.getAmount(), item.getAmount());
     }
     @Override
-    public String getDescription() {
+    public String toString() {
         return "第" + fullAmount + "件" + discountRate*10 + "折";
     }
 }
