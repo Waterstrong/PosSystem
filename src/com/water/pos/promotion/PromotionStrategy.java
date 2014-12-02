@@ -4,6 +4,7 @@ import com.water.pos.common.Pair;
 import com.water.pos.model.Item;
 import com.water.pos.parser.DataParser;
 
+import java.io.BufferedReader;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -25,9 +26,9 @@ public class PromotionStrategy {
         }
         return newItem;
     }
-    public void attach(DataParser dataParser, String fileName) {
+    public void attach(DataParser dataParser, BufferedReader bufferedReader) {
         try {
-            List<Pair<String, Promotion>> promotionList = dataParser.loadFromFile(fileName);
+            List<Pair<String, Promotion>> promotionList = dataParser.loadData(bufferedReader);
             Iterator<Pair<String, Promotion>> iter = promotionList.iterator();
             //promotionMap.clear();
             while (iter.hasNext()) {

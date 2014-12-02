@@ -1,5 +1,6 @@
 package com.water.pos.market;
 
+import com.water.pos.file.ShoppingCartFile;
 import com.water.pos.model.Item;
 import com.water.pos.parser.ShoppingCartParser;
 import com.water.pos.promotion.PromotionStrategy;
@@ -21,7 +22,7 @@ public class ShoppingCart {
     }
     private void init() {
         try {
-            List<Item> itemList = new ShoppingCartParser().loadFromFile("cart.txt");
+            List<Item> itemList = new ShoppingCartParser().loadData(new ShoppingCartFile().getBufferedReader());
             Iterator<Item> iter = itemList.iterator();
             while (iter.hasNext()) {
                 Item item = iter.next();

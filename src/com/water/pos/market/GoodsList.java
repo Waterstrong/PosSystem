@@ -1,5 +1,6 @@
 package com.water.pos.market;
 
+import com.water.pos.file.GoodsFile;
 import com.water.pos.model.Goods;
 import com.water.pos.parser.GoodsParser;
 
@@ -19,7 +20,7 @@ public class GoodsList {
     }
     private void init(){
         try {
-            List<Goods> goodsList = new GoodsParser().loadFromFile("itemlist.txt");
+            List<Goods> goodsList = new GoodsParser().loadData(new GoodsFile().getBufferedReader());
             Iterator<Goods> iter = goodsList.iterator();
             while (iter.hasNext()) {
                 Goods goods = iter.next();
