@@ -10,10 +10,10 @@ public class DiscountPromotionTest {
 
     @Test
     public void should_calculate_discount_correctly_when_give_a_discount_rate() throws Exception {
-        DiscountPromotion discountPromotion = new DiscountPromotion(0.8);
+        DiscountPromotion discountPromotion = new DiscountPromotion(80);
 
-        Item item = discountPromotion.calculate(new Item("123", 128.5, 1));
+        Item item = discountPromotion.calculate(new Item("123", 128, 1));
 
-        assertThat(item.getSubtotal(), is(128.5*0.8));
+        assertThat(item.getSubtotal(), is(128*0.8));
     }
 }

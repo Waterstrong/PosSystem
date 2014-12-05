@@ -10,6 +10,6 @@ public class DiscountParser extends DataParser<Pair<String, DiscountPromotion>> 
     @Override
     protected Pair<String, DiscountPromotion> parse(String line) {
         String[] splitResult = line.split(":"); // parse the line as barcode : discount
-        return new Pair<String, DiscountPromotion>(splitResult[0], new DiscountPromotion(Double.parseDouble(splitResult[1])/100));
+        return new Pair<String, DiscountPromotion>(splitResult[0], new DiscountPromotion(Double.parseDouble(splitResult[1])));
     }
 }

@@ -10,7 +10,7 @@ import java.util.List;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+
 
 public class DiscountParserTest {
 
@@ -25,7 +25,13 @@ public class DiscountParserTest {
         DiscountPromotion discountPromotion = pairList.get(0).getValue();
 */
         //assertThat(barcode, is("ITEM000001"));
-       // assertTrue(discountPromotion.equals(new DiscountPromotion(74)));
+       // assertTrue(discountPromotion.equals(new DiscountPromotion(75)));
 
+        DiscountParser discountParser = new DiscountParser();
+        Pair<String, DiscountPromotion> pair = discountParser.parse("ITEM000001:75");
+
+        assertThat(pair.getKey(), is("ITEM000001"));
+
+        assertThat(pair.getValue().getDiscountRate(), is(75d));
     }
 }

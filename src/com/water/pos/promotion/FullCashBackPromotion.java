@@ -7,7 +7,16 @@ import com.water.pos.model.Item;
  */
 public class FullCashBackPromotion implements Promotion {
     private double fullCash;
+
     private double cashBack;
+
+    public double getFullCash() {
+        return fullCash;
+    }
+
+    public double getCashBack() {
+        return cashBack;
+    }
     public FullCashBackPromotion(double fullCash, double cashBack) {
         this.fullCash = fullCash;
         this.cashBack = cashBack;
