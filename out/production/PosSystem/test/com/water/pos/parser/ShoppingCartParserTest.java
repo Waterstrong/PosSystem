@@ -22,8 +22,8 @@ public class ShoppingCartParserTest {
 
     @Test
     public void should_parse_correctly_when_give_the_shopping_cart_data_with_amount() throws Exception {
-        /*ShoppingCartParser shoppingCartParser = new ShoppingCartParser();
-        BufferedReader reader = mock(BufferedReader.class);
+        ShoppingCartParser shoppingCartParser = new ShoppingCartParser();
+        /*BufferedReader reader = mock(BufferedReader.class);
         when(reader.readLine()).thenReturn("ITEM000001-3").thenReturn("ITEM000005");
 
         List<Item> itemList = shoppingCartParser.loadData(reader);
