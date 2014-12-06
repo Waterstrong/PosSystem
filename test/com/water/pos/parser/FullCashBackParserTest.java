@@ -29,7 +29,9 @@ public class FullCashBackParserTest {
         */
 
         FullCashBackParser fullCashBackParser = new FullCashBackParser();
+
         Pair<String, FullCashBackPromotion> pair = fullCashBackParser.parse("ITEM000001:100:5");
+
         assertThat(pair.getKey(), is("ITEM000001"));
         assertThat(pair.getValue().getFullCash(), is(100d));
         assertThat(pair.getValue().getCashBack(), is(5d));
