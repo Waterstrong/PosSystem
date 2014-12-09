@@ -1,8 +1,6 @@
 package com.water.pos.market;
 
-import com.water.pos.file.DiscountFile;
-import com.water.pos.file.FullCashBackFile;
-import com.water.pos.file.SecondHalfPriceFile;
+import com.water.pos.file.*;
 import com.water.pos.promotion.PromotionStrategy;
 import com.water.pos.parser.DiscountParser;
 import com.water.pos.parser.FullCashBackParser;
@@ -15,9 +13,19 @@ import com.water.pos.parser.SecondHalfPriceParser;
 public class PosSystem {
     public static void main (String[] args) {
         GoodsList goodsList = new GoodsList();
+        try {
+            goodsList.add(new GoodsFile().getBufferedReader());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         goodsList.showDetail();
 
         ShoppingCart shoppingCart = new ShoppingCart(goodsList);
+        try {
+            shoppingCart.add(new ShoppingCartFile().getBufferedReader());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         shoppingCart.showDetail();
 
         PromotionStrategy promotionStrategy = new PromotionStrategy();

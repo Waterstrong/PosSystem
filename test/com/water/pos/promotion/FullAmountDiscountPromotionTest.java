@@ -13,6 +13,6 @@ public class FullAmountDiscountPromotionTest {
 
         Item item = fullAmountDiscountPromotion.calculate(new Item("123", 50, 5));
 
-        assertThat(item.getSubtotal(), is(50d+25+50+25+50));
+        assertEquals(item.getSubtotal(), 50d+25+50+25+50, 0.00001);
     }
 }

@@ -14,6 +14,6 @@ public class DiscountPromotionTest {
 
         Item item = discountPromotion.calculate(new Item("123", 128, 1));
 
-        assertThat(item.getSubtotal(), is(128*0.8));
+        assertEquals(item.getSubtotal(), 128*0.8, 0.00001);
     }
 }

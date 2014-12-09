@@ -4,6 +4,7 @@ import com.water.pos.file.GoodsFile;
 import com.water.pos.model.Goods;
 import com.water.pos.parser.GoodsParser;
 
+import java.io.BufferedReader;
 import java.util.HashMap;
 import java.lang.String;
 import java.util.Iterator;
@@ -15,12 +16,10 @@ import java.util.Map;
  */
 public class GoodsList {
     private Map<String, Goods> goodsMap = new HashMap<String, Goods>();
-    public GoodsList() {
-        init();
-    }
-    private void init(){
+
+    public void add(BufferedReader reader) {
         try {
-            List<Goods> goodsList = new GoodsParser().loadData(new GoodsFile().getBufferedReader());
+            List<Goods> goodsList = new GoodsParser().loadData(reader);
             Iterator<Goods> iter = goodsList.iterator();
             while (iter.hasNext()) {
                 Goods goods = iter.next();
@@ -30,9 +29,11 @@ public class GoodsList {
             ex.printStackTrace();
         }
     }
+
     public Goods getGoods(String barcode) {
-        return goodsMap.get(barcode);
+        return goodsMap.get(barcode) ;
     }
+
     public void showDetail() {
         Iterator<String> iter = goodsMap.keySet().iterator();
         System.out.println("商品基本信息：");

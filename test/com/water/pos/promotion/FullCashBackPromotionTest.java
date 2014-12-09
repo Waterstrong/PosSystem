@@ -14,7 +14,6 @@ public class FullCashBackPromotionTest {
 
         Item item = fullCashBackPromotion.calculate(new Item("123", 300, 1));
 
-        assertThat(item.getSubtotal(), is(300d-30));
-
+        assertEquals(item.getSubtotal(), 300d-30, 0.00001);
     }
 }
