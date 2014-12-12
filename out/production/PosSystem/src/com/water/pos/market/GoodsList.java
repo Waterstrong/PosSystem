@@ -17,16 +17,9 @@ import java.util.Map;
 public class GoodsList {
     private Map<String, Goods> goodsMap = new HashMap<String, Goods>();
 
-    public void add(BufferedReader reader) {
-        try {
-            List<Goods> goodsList = new GoodsParser().loadData(reader);
-            Iterator<Goods> iter = goodsList.iterator();
-            while (iter.hasNext()) {
-                Goods goods = iter.next();
-                goodsMap.put(goods.getBarcode(), goods);
-            }
-        }catch (Exception ex) {
-            ex.printStackTrace();
+    public void add(List<Goods> goodsList) {
+        for (Goods goods : goodsList) {
+            goodsMap.put(goods.getBarcode(), goods);
         }
     }
 

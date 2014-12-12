@@ -3,9 +3,9 @@ package com.water.pos.file;
 /**
  * Created by water on 14-12-2.
  */
-public class ShoppingCartFile extends FileStream {
+public class ShoppingCartFile implements IFileStream {
     @Override
-    protected String getFileName() {
+    public String getFileName() {
         return "cart.txt";
     }
 }

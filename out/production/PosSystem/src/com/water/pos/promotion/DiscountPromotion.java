@@ -5,7 +5,7 @@ import com.water.pos.model.Item;
 /**
  * Created by water on 14-11-27.
  */
-public class DiscountPromotion implements Promotion {
+public class DiscountPromotion implements IPromotion {
     private double discountRate;
 
     public double getDiscountRate() {

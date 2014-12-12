@@ -5,7 +5,7 @@ import com.water.pos.model.Item;
 /**
  * Created by water on 14-11-27.
  */
-public class FullCashBackPromotion implements Promotion {
+public class FullCashBackPromotion implements IPromotion {
     private double fullCash;
 
     private double cashBack;

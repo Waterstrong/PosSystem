@@ -1,19 +1,17 @@
 package com.water.pos.parser;
 
-import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by water on 14-11-27.
  */
-public abstract class DataParser<T> {
-    public List<T> loadData(BufferedReader bufferedReader) throws Exception {
-        List<T> dataList = new ArrayList<T>();
-        while (bufferedReader.ready()) {
-            dataList.add(parse(bufferedReader.readLine())); // template method to get the List<V>.
+public abstract class DataParser {
+    public static <O> List<O> map(List<String> lines, IParser<O> parser) throws Exception {
+        List<O> dataList = new ArrayList<O>();
+        for (String line : lines) {
+            dataList.add(parser.parse(line));
         }
         return dataList;
     }
-    protected abstract T parse(String line);
 }

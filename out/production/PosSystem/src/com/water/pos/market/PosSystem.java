@@ -1,10 +1,8 @@
 package com.water.pos.market;
 
 import com.water.pos.file.*;
+import com.water.pos.parser.*;
 import com.water.pos.promotion.PromotionStrategy;
-import com.water.pos.parser.DiscountParser;
-import com.water.pos.parser.FullCashBackParser;
-import com.water.pos.parser.SecondHalfPriceParser;
 
 
 /**
@@ -14,7 +12,7 @@ public class PosSystem {
     public static void main (String[] args) {
         GoodsList goodsList = new GoodsList();
         try {
-            goodsList.add(new GoodsFile().getBufferedReader());
+            goodsList.add(DataParser.map(DataProvider.importData(new GoodsFile()), new GoodsParser()));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -22,7 +20,7 @@ public class PosSystem {
 
         ShoppingCart shoppingCart = new ShoppingCart(goodsList);
         try {
-            shoppingCart.add(new ShoppingCartFile().getBufferedReader());
+            shoppingCart.add(DataParser.map(DataProvider.importData(new ShoppingCartFile()), new ShoppingCartParser()));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -30,9 +28,9 @@ public class PosSystem {
 
         PromotionStrategy promotionStrategy = new PromotionStrategy();
         try {
-            promotionStrategy.attach(new DiscountParser(), new DiscountFile().getBufferedReader());
-            promotionStrategy.attach(new SecondHalfPriceParser(), new SecondHalfPriceFile().getBufferedReader());
-            promotionStrategy.attach(new FullCashBackParser(), new FullCashBackFile().getBufferedReader());
+            promotionStrategy.attach(DataParser.map(DataProvider.importData(new DiscountFile()), new DiscountParser()));
+            promotionStrategy.attach(DataParser.map(DataProvider.importData(new SecondHalfPriceFile()), new SecondHalfPriceParser()));
+            promotionStrategy.attach(DataParser.map(DataProvider.importData( new FullCashBackFile() ), new FullCashBackParser()));
         } catch (Exception ex) {
             ex.printStackTrace();
         }

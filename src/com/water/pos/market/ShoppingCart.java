@@ -53,21 +53,13 @@ public class ShoppingCart {
     public double getBeforePromotionTotal() {
         return beforePromotionTotal;
     }
-    public void add(BufferedReader reader) {
-        try {
-            List<Item> itemList = new ShoppingCartParser().loadData(reader);
-            Iterator<Item> iter = itemList.iterator();
-            while (iter.hasNext()) {
-                Item item = iter.next();
-                Item existItem = cartMap.get(item.getGoods().getBarcode());
-                int newAount = item.getAmount() + (existItem == null ? 0 : existItem.getAmount());
-                Double price = goodsList.getGoods(item.getGoods().getBarcode()).getPrice();
-                Item newItem = new Item(item.getGoods().getBarcode(), price, newAount);
-                cartMap.put(item.getGoods().getBarcode(), newItem);
-            }
-
-        } catch (Exception ex) {
-            ex.printStackTrace();
+    public void add(List<Item> itemList) {
+        for (Item item : itemList) {
+            Item existItem = cartMap.get(item.getGoods().getBarcode());
+            int newAount = item.getAmount() + (existItem == null ? 0 : existItem.getAmount());
+            Double price = goodsList.getGoods(item.getGoods().getBarcode()).getPrice();
+            Item newItem = new Item(item.getGoods().getBarcode(), price, newAount);
+            cartMap.put(item.getGoods().getBarcode(), newItem);
         }
     }
 

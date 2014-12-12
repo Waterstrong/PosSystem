@@ -5,9 +5,9 @@ import com.water.pos.model.Item;
 /**
  * Created by water on 14-11-27.
  */
-public class ShoppingCartParser extends DataParser<Item> {
+public class ShoppingCartParser implements IParser<Item> {
     @Override
-    protected Item parse(String line) {
+    public Item parse(String line) {
         String[] splitResult = line.split("-"); // parse the line as barcode : amount
         Integer amount = 1;
         if (splitResult.length > 1) {
