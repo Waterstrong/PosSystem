@@ -22,8 +22,6 @@ public class ShoppingCartParserTest {
 
     @Test
     public void should_parse_correctly_when_give_the_shopping_cart_data_with_amount() throws Exception {
-        BufferedReader reader = mock(BufferedReader.class);
-
         Item item = shoppingCartParser.parse("ITEM000001-3");
 
         assertThat(item.getGoods().getBarcode(), is("ITEM000001"));
@@ -32,11 +30,21 @@ public class ShoppingCartParserTest {
 
     @Test
     public void should_parse_correctly_when_give_the_shopping_cart_data_without_amount() throws Exception {
-        BufferedReader reader = mock(BufferedReader.class);
-
         Item item = shoppingCartParser.parse("ITEM000005");
 
         assertThat(item.getGoods().getBarcode(), is("ITEM000005"));
         assertThat(item.getAmount(), is(1));
+    }
+
+    @Test
+    public void should_get_null_item_when_give_null_line_string() throws Exception {
+        Item item = shoppingCartParser.parse(null);
+
+        assertNull(item);
+    }
+
+    @Test(expected = NumberFormatException.class)
+    public void should_parse_number_format_exception_when_give_string_without_right_number() throws NumberFormatException {
+        shoppingCartParser.parse("ITEM000005-3x");
     }
 }
