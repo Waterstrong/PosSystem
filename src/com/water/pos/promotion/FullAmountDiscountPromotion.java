@@ -7,7 +7,15 @@ import com.water.pos.model.Item;
  */
 public class FullAmountDiscountPromotion implements IPromotion {
     private int fullAmount;
+
     private double discountRate;
+    public int getFullAmount() {
+        return fullAmount;
+    }
+
+    public double getDiscountRate() {
+        return discountRate;
+    }
     public FullAmountDiscountPromotion(int fullAmount, double discountRate) {
         this.fullAmount = fullAmount;
         this.discountRate = discountRate;
@@ -15,11 +23,11 @@ public class FullAmountDiscountPromotion implements IPromotion {
     @Override
     public Item calculate(final Item item) {
         int discountAmount = item.getAmount() / fullAmount;
-        double subtotal = item.getGoods().getPrice() * discountRate * discountAmount + (item.getAmount()-discountAmount)*item.getGoods().getPrice();
+        double subtotal = item.getGoods().getPrice() * discountRate/100 * discountAmount + (item.getAmount()-discountAmount)*item.getGoods().getPrice();
         return new Item(item.getGoods().getBarcode(), subtotal/item.getAmount(), item.getAmount());
     }
     @Override
     public String toString() {
-        return "第" + fullAmount + "件" + discountRate*10 + "折";
+        return "第" + fullAmount + "件" + discountRate/10 + "折";
     }
 }

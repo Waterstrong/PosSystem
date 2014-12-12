@@ -1,5 +1,7 @@
 package com.water.pos.promotion;
 
+import com.water.pos.common.Pair;
+import com.water.pos.market.GoodsList;
 import com.water.pos.model.Item;
 import com.water.pos.parser.DiscountParser;
 import com.water.pos.parser.FullCashBackParser;
@@ -8,6 +10,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.BufferedReader;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
@@ -24,18 +28,11 @@ public class PromotionStrategyTest {
     @Test
     public void should_calculate_subtotal_correctly_when_many_promotions_given() throws Exception {
         PromotionStrategy promotionStrategy = new PromotionStrategy();
-        BufferedReader discountReader = mock(BufferedReader.class);
-        BufferedReader secondHalfPriceReader = mock(BufferedReader.class);
-        BufferedReader fullCashBackReader = mock(BufferedReader.class);
-        when(discountReader.readLine()).thenReturn("ITEM000001:75");
-        when(discountReader.ready()).thenReturn(true, false);
-        when(secondHalfPriceReader.readLine()).thenReturn("ITEM000001");
-        when(secondHalfPriceReader.ready()).thenReturn(true, false);
-        when(fullCashBackReader.readLine()).thenReturn("ITEM000001:100:5");
-        when(fullCashBackReader.ready()).thenReturn(true, false);
-        promotionStrategy.attach(new DiscountParser(), discountReader);
-        promotionStrategy.attach(new SecondHalfPriceParser(), secondHalfPriceReader);
-        promotionStrategy.attach(new FullCashBackParser(), fullCashBackReader);
+        List<Pair<String, IPromotion>> promotionList = new ArrayList<Pair<String, IPromotion>>();
+        promotionList.add(new Pair<String, IPromotion>("ITEM000001", new DiscountPromotion(75)));
+        promotionList.add(new Pair<String, IPromotion>("ITEM000001", new FullAmountDiscountPromotion(2, 50)));
+        promotionList.add(new Pair<String, IPromotion>("ITEM000001", new FullCashBackPromotion(100, 5)));
+        promotionStrategy.attach(promotionList);
 
         Item item = promotionStrategy.calculate(new Item("ITEM000001", 50, 5));
 

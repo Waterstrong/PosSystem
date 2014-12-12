@@ -1,20 +1,18 @@
 package com.water.pos.market;
 
+import com.water.pos.common.Pair;
+import com.water.pos.model.Goods;
 import com.water.pos.model.Item;
-import com.water.pos.parser.DiscountParser;
-import com.water.pos.parser.FullCashBackParser;
-import com.water.pos.parser.SecondHalfPriceParser;
-import com.water.pos.promotion.PromotionStrategy;
+import com.water.pos.promotion.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.BufferedReader;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 public class ShoppingCartTest {
     PromotionStrategy promotionStrategy;
@@ -22,33 +20,25 @@ public class ShoppingCartTest {
     @Before
     public void setUp() throws Exception {
         promotionStrategy = new PromotionStrategy();
-        BufferedReader discountReader = mock(BufferedReader.class);
-        BufferedReader secondHalfPriceReader = mock(BufferedReader.class);
-        BufferedReader fullCashBackReader = mock(BufferedReader.class);
-        when(discountReader.readLine()).thenReturn("ITEM000001:75");
-        when(discountReader.ready()).thenReturn(true, false);
-        when(secondHalfPriceReader.readLine()).thenReturn("ITEM000001");
-        when(secondHalfPriceReader.ready()).thenReturn(true, false);
-        when(fullCashBackReader.readLine()).thenReturn("ITEM000001:100:5", "ITEM_TOTAL:300:30");
-        when(fullCashBackReader.ready()).thenReturn(true, true, false);
-        promotionStrategy.attach(new DiscountParser(), discountReader);
-        promotionStrategy.attach(new SecondHalfPriceParser(), secondHalfPriceReader);
-        promotionStrategy.attach(new FullCashBackParser(), fullCashBackReader);
-
+        List<Pair<String, IPromotion>> promotionList = new ArrayList<Pair<String, IPromotion>>();
+        promotionList.add(new Pair<String, IPromotion>("ITEM000001",  new DiscountPromotion(75)));
+        promotionList.add(new Pair<String, IPromotion>("ITEM000001", new FullAmountDiscountPromotion(2, 50)));
+        promotionList.add(new Pair<String, IPromotion>("ITEM000001", new FullCashBackPromotion(100, 5)));
+        promotionList.add(new Pair<String, IPromotion>("ITEM_TOTAL", new FullCashBackPromotion(300, 30)));
+        promotionStrategy.attach(promotionList);
         goodsList = new GoodsList();
-        BufferedReader reader = mock(BufferedReader.class);
-        when(reader.readLine()).thenReturn("ITEM000001:80", "ITEM000002:100");
-        when(reader.ready()).thenReturn(true, true, false);
-        goodsList.add(reader);
+        List<Goods> goodsArray = new ArrayList<Goods>();
+        goodsArray.add(new Goods("ITEM000001", 80));
+        goodsArray.add(new Goods("ITEM000002", 100));
+        goodsList.add(goodsArray);
     }
 
     @Test
     public void should_get_the_right_item_when_add_item_into_shopping_cart() throws Exception {
         ShoppingCart shoppingCart = new ShoppingCart(goodsList);
-        BufferedReader reader = mock(BufferedReader.class);
-        when(reader.readLine()).thenReturn("ITEM000001-3");
-        when(reader.ready()).thenReturn(true, false);
-        shoppingCart.add(reader);
+        List<Item> itemList = new ArrayList<Item>();
+        itemList.add(new Item("ITEM000001", 0, 3));
+        shoppingCart.add(itemList);
 
         Map<String, Item> itemMap = shoppingCart.calculate(promotionStrategy);
         Item item = itemMap.get("ITEM000001");
@@ -62,10 +52,9 @@ public class ShoppingCartTest {
     @Test
     public void should_get_the_right_total_before_promotion() throws Exception {
         ShoppingCart shoppingCart = new ShoppingCart(goodsList);
-        BufferedReader reader = mock(BufferedReader.class);
-        when(reader.readLine()).thenReturn("ITEM000001");
-        when(reader.ready()).thenReturn(true, false);
-        shoppingCart.add(reader);
+        List<Item> itemList = new ArrayList<Item>();
+        itemList.add(new Item("ITEM000001", 0, 1 ));
+        shoppingCart.add(itemList);
 
         shoppingCart.calculate(promotionStrategy);
 
@@ -75,10 +64,10 @@ public class ShoppingCartTest {
     @Test
     public void should_get_the_right_total_after_promotion() throws Exception {
         ShoppingCart shoppingCart = new ShoppingCart(goodsList);
-        BufferedReader reader = mock(BufferedReader.class);
-        when(reader.readLine()).thenReturn("ITEM000001-5", "ITEM000002");
-        when(reader.ready()).thenReturn(true, true, false);
-        shoppingCart.add(reader);
+        List<Item> itemList = new ArrayList<Item>();
+        itemList.add(new Item("ITEM000001", 0, 5 ));
+        itemList.add(new Item("ITEM000002", 0, 1));
+        shoppingCart.add(itemList);
 
         shoppingCart.calculate(promotionStrategy);
 
@@ -88,10 +77,9 @@ public class ShoppingCartTest {
     @Test
     public void should_get_promotion_subtotal_when_give_the_barcode() throws Exception {
         ShoppingCart shoppingCart = new ShoppingCart(goodsList);
-        BufferedReader reader = mock(BufferedReader.class);
-        when(reader.readLine()).thenReturn("ITEM000001-5");
-        when(reader.ready()).thenReturn(true, false);
-        shoppingCart.add(reader);
+        List<Item> itemList = new ArrayList<Item>();
+        itemList.add(new Item("ITEM000001", 0, 5 ));
+        shoppingCart.add(itemList);
 
         shoppingCart.calculate(promotionStrategy);
 

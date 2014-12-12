@@ -23,24 +23,20 @@ public class ShoppingCartParserTest {
     @Test
     public void should_parse_correctly_when_give_the_shopping_cart_data_with_amount() throws Exception {
         BufferedReader reader = mock(BufferedReader.class);
-        when(reader.readLine()).thenReturn("ITEM000001-3");
-        when(reader.ready()).thenReturn(true, false);
 
-        List<Item> itemList = shoppingCartParser.loadData(reader);
+        Item item = shoppingCartParser.parse("ITEM000001-3");
 
-        assertThat(itemList.get(0).getGoods().getBarcode(), is("ITEM000001"));
-        assertThat(itemList.get(0).getAmount(), is(3));
+        assertThat(item.getGoods().getBarcode(), is("ITEM000001"));
+        assertThat(item.getAmount(), is(3));
     }
 
     @Test
     public void should_parse_correctly_when_give_the_shopping_cart_data_without_amount() throws Exception {
         BufferedReader reader = mock(BufferedReader.class);
-        when(reader.readLine()).thenReturn("ITEM000005");
-        when(reader.ready()).thenReturn(true, false);
 
-        List<Item> itemList = shoppingCartParser.loadData(reader);
+        Item item = shoppingCartParser.parse("ITEM000005");
 
-        assertThat(itemList.get(0).getGoods().getBarcode(), is("ITEM000005"));
-        assertThat(itemList.get(0).getAmount(), is(1));
+        assertThat(item.getGoods().getBarcode(), is("ITEM000005"));
+        assertThat(item.getAmount(), is(1));
     }
 }

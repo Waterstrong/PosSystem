@@ -10,6 +10,6 @@ import com.water.pos.promotion.IPromotion;
 public class SecondHalfPriceParser implements IParser<Pair<String, IPromotion>> {
     @Override
     public Pair<String, IPromotion> parse(String line) {
-        return new Pair<String, IPromotion>(line, new FullAmountDiscountPromotion(2, 0.5));
+        return new Pair<String, IPromotion>(line, new FullAmountDiscountPromotion(2, 50));
     }
 }

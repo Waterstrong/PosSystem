@@ -2,6 +2,7 @@ package com.water.pos.parser;
 
 import com.water.pos.common.Pair;
 import com.water.pos.promotion.FullAmountDiscountPromotion;
+import com.water.pos.promotion.IPromotion;
 import org.junit.Test;
 
 import java.io.BufferedReader;
@@ -16,12 +17,13 @@ public class SecondHalfPriceParserTest {
     @Test
     public void should_parse_correctly_when_give_the_second_half_price_data() throws Exception {
         SecondHalfPriceParser secondHalfPriceParser = new SecondHalfPriceParser();
-        BufferedReader reader = mock(BufferedReader.class);
-        when(reader.readLine()).thenReturn("ITEM000001");
-        when(reader.ready()).thenReturn(true, false);
 
-        List<Pair<String, FullAmountDiscountPromotion>> pairList = secondHalfPriceParser.loadData(reader);
+        Pair<String, IPromotion> promotionPair = secondHalfPriceParser.parse("ITEM000001");
+        String barcode = promotionPair.getKey();
+        FullAmountDiscountPromotion fullAmountDiscountPromotion = (FullAmountDiscountPromotion)promotionPair.getValue();
 
-        assertThat(pairList.get(0).getKey(), is("ITEM000001"));
+        assertThat(barcode, is("ITEM000001"));
+        assertThat(fullAmountDiscountPromotion.getFullAmount(), is(2));
+        assertEquals(fullAmountDiscountPromotion.getDiscountRate(), 50, 0.00001);
     }
 }

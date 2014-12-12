@@ -2,6 +2,7 @@ package com.water.pos.parser;
 
 import com.water.pos.common.Pair;
 import com.water.pos.promotion.FullCashBackPromotion;
+import com.water.pos.promotion.IPromotion;
 import org.junit.Test;
 
 import java.io.BufferedReader;
@@ -20,9 +21,9 @@ public class FullCashBackParserTest {
         when(reader.readLine()).thenReturn("ITEM000001:100:5");
         when(reader.ready()).thenReturn(true, false);
 
-        List<Pair<String, FullCashBackPromotion>> pairList = fullCashBackParser.loadData(reader);
-        String barcode = pairList.get(0).getKey();
-        FullCashBackPromotion fullCashBackPromotion = pairList.get(0).getValue();
+        Pair<String, IPromotion> promotionPair = fullCashBackParser.parse("ITEM000001:100:5");
+        String barcode = promotionPair.getKey();
+        FullCashBackPromotion fullCashBackPromotion = (FullCashBackPromotion)promotionPair.getValue();
 
         assertThat(barcode, is("ITEM000001"));
         assertEquals(fullCashBackPromotion.getFullCash(), 100d, 0.00001);

@@ -4,6 +4,8 @@ import com.water.pos.model.Goods;
 import org.junit.Test;
 
 import java.io.BufferedReader;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
@@ -15,11 +17,10 @@ public class GoodsListTest {
     @Test
     public void should_add_goods_to_list_successfully_when_given_a_buffered_reader() throws Exception {
         GoodsList goodsList = new GoodsList();
-        BufferedReader reader = mock(BufferedReader.class);
-        when(reader.readLine()).thenReturn("ITEM000001:40");
-        when(reader.ready()).thenReturn(true, false);
+        List<Goods> goodsCollection = new ArrayList<Goods>();
+        goodsCollection.add(new Goods("ITEM000001", 40));
 
-        goodsList.add(reader);
+        goodsList.add(goodsCollection);
         Goods goods = goodsList.getGoods("ITEM000001");
 
         assertNotNull(goods);
