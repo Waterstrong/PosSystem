@@ -15,7 +15,7 @@ import static org.mockito.Mockito.when;
 public class GoodsListTest {
 
     @Test
-    public void should_add_goods_to_list_successfully_when_given_a_buffered_reader() throws Exception {
+    public void should_add_goods_to_list_successfully_when_given_goods_array() throws Exception {
         GoodsList goodsList = new GoodsList();
         List<Goods> goodsCollection = new ArrayList<Goods>();
         goodsCollection.add(new Goods("ITEM000001", 40));
@@ -29,7 +29,7 @@ public class GoodsListTest {
     }
 
     @Test
-    public void should_get_null_goods_when_the_barcode_is_not_in_the_goods_list() throws Exception {
+    public void should_get_null_goods_when_barcode_is_not_in_the_goods_list() throws Exception {
         GoodsList goodsList = new GoodsList();
 
         Goods goods = goodsList.getGoods("ITEM000001");
