@@ -23,6 +23,7 @@ public class FullCashBackPromotion implements IPromotion {
     }
     @Override
     public Item calculate(Item item) {
+       if (fullCash < 0 || cashBack < 0 || item == null) return null;
         double subtotal = item.getSubtotal();
         if (subtotal >= fullCash) {
             subtotal -= cashBack;

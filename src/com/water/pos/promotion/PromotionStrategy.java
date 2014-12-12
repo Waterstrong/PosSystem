@@ -6,10 +6,7 @@ import com.water.pos.file.DiscountFile;
 import com.water.pos.model.Item;
 import com.water.pos.parser.DataParser;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by water on 14-11-27.
@@ -17,6 +14,7 @@ import java.util.List;
 public class PromotionStrategy {
     private HashMap<String, List<IPromotion>> promotionMap = new HashMap<String, List<IPromotion>>();
     public Item calculate(final Item item) {
+        if (item == null) return null;
         Item newItem = item;
         if (promotionMap.containsKey(item.getGoods().getBarcode())) {
             Iterator<IPromotion> iter = promotionMap.get(item.getGoods().getBarcode()).iterator();
@@ -27,6 +25,11 @@ public class PromotionStrategy {
         }
         return newItem;
     }
+
+    public List<IPromotion> getPromotionsOfGoods(String barcode) {
+        return promotionMap.get(barcode);
+    }
+
     public void attach(List<Pair<String, IPromotion>> promotionList) {
         for (Pair<String, IPromotion> promotionPair : promotionList) {
             String barcode = promotionPair.getKey();
@@ -35,7 +38,7 @@ public class PromotionStrategy {
             if (promotionMap.containsKey(barcode)) {
                 proList = promotionMap.get(barcode);
             } else {
-                proList = new LinkedList<IPromotion>();
+                proList = new ArrayList<IPromotion>();
             }
             proList.add(promotion);
             promotionMap.put(barcode, proList);

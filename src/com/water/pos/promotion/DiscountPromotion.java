@@ -17,6 +17,7 @@ public class DiscountPromotion implements IPromotion {
 
     @Override
     public Item calculate(final Item item) {
+        if (discountRate < 0 || item == null) return null;
         return new Item(item.getGoods().getBarcode(), item.getGoods().getPrice()*discountRate/100, item.getAmount());
     }
     @Override

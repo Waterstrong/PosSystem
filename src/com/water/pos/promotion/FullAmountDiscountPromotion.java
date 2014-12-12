@@ -22,6 +22,8 @@ public class FullAmountDiscountPromotion implements IPromotion {
     }
     @Override
     public Item calculate(final Item item) {
+        if (fullAmount <= 0 || discountRate < 0 || item == null) return null;
+
         int discountAmount = item.getAmount() / fullAmount;
         double subtotal = item.getGoods().getPrice() * discountRate/100 * discountAmount + (item.getAmount()-discountAmount)*item.getGoods().getPrice();
         return new Item(item.getGoods().getBarcode(), subtotal/item.getAmount(), item.getAmount());

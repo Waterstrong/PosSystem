@@ -27,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ShoppingCartTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ShoppingCartTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/water/pos/market/ShoppingCartTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.84375" vertical-offset="270" max-vertical-offset="1674">
-              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1674">
+              <caret line="29" column="56" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,10 +42,11 @@
       <file leaf-file-name="PromotionStrategyTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/water/pos/promotion/PromotionStrategyTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="540">
-              <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="233" max-vertical-offset="1422">
+              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding>
-                <element signature="e#968#994#0" expanded="true" />
+                <element signature="e#3776#3788#0" expanded="true" />
+                <element signature="e#3857#3869#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -54,8 +55,18 @@
       <file leaf-file-name="FullCashBackPromotion.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/water/pos/promotion/FullCashBackPromotion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="217" max-vertical-offset="648">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="174" max-vertical-offset="666">
+              <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FullCashBackPromotionTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/com/water/pos/promotion/FullCashBackPromotionTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1026">
+              <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -65,7 +76,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/water/pos/promotion/IPromotion.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
-              <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -74,38 +85,31 @@
       <file leaf-file-name="PromotionStrategy.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/water/pos/promotion/PromotionStrategy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="232" max-vertical-offset="1062">
-              <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1170">
+              <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+              <folding>
+                <element signature="e#966#967#0" expanded="true" />
+                <element signature="e#1014#1015#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DiscountPromotion.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DiscountPromotion.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/water/pos/promotion/DiscountPromotion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="468">
-              <caret line="19" column="97" selection-start-line="19" selection-start-column="97" selection-end-line="19" selection-end-column="97" />
+            <state vertical-scroll-proportion="0.4375" vertical-offset="102" max-vertical-offset="486">
+              <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SecondHalfPriceParserTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com/water/pos/parser/SecondHalfPriceParserTest.java">
+      <file leaf-file-name="DiscountPromotionTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/com/water/pos/promotion/DiscountPromotionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="414">
-              <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SecondHalfPriceParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/water/pos/parser/SecondHalfPriceParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
-              <caret line="12" column="87" selection-start-line="12" selection-start-column="87" selection-end-line="12" selection-end-column="87" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="12" max-vertical-offset="846">
+              <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -114,8 +118,8 @@
       <file leaf-file-name="FullAmountDiscountPromotionTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/water/pos/promotion/FullAmountDiscountPromotionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
-              <caret line="11" column="101" selection-start-line="11" selection-start-column="101" selection-end-line="11" selection-end-column="101" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="972">
+              <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -124,11 +128,11 @@
       <file leaf-file-name="FullAmountDiscountPromotion.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/water/pos/promotion/FullAmountDiscountPromotion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="630">
-              <caret line="30" column="55" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="109" max-vertical-offset="666">
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
               <folding>
-                <element signature="e#339#340#0" expanded="true" />
-                <element signature="e#374#375#0" expanded="true" />
+                <element signature="e#1040#1041#0" expanded="true" />
+                <element signature="e#1109#1110#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -154,10 +158,6 @@
         <option value="$PROJECT_DIR$/src/ws/pos/market/ShoppingCart.java" />
         <option value="$PROJECT_DIR$/src/com/water/pos/model/Goods.java" />
         <option value="$PROJECT_DIR$/src/com/water/pos/model/Item.java" />
-        <option value="$PROJECT_DIR$/src/com/water/pos/promotion/DiscountPromotion.java" />
-        <option value="$PROJECT_DIR$/src/com/water/pos/promotion/FullCashBackPromotion.java" />
-        <option value="$PROJECT_DIR$/test/com/water/pos/promotion/DiscountPromotionTest.java" />
-        <option value="$PROJECT_DIR$/test/com/water/pos/promotion/FullCashBackPromotionTest.java" />
         <option value="$PROJECT_DIR$/src/com/water/pos/market/KkPos.java" />
         <option value="$PROJECT_DIR$/src/com/water/pos/parser/ParseStrategy.java" />
         <option value="$PROJECT_DIR$/src/com/water/pos/parser/ShoppingCartParser.java" />
@@ -175,7 +175,6 @@
         <option value="$PROJECT_DIR$/src/com/water/pos/promotion/Promotion.java" />
         <option value="$PROJECT_DIR$/src/com/water/pos/promotion/IPromotion.java" />
         <option value="$PROJECT_DIR$/src/com/water/pos/parser/DiscountParser.java" />
-        <option value="$PROJECT_DIR$/src/com/water/pos/promotion/PromotionStrategy.java" />
         <option value="$PROJECT_DIR$/src/com/water/pos/market/PosSystem.java" />
         <option value="$PROJECT_DIR$/src/com/water/pos/parser/FullCashBackParser.java" />
         <option value="$PROJECT_DIR$/src/com/water/pos/file/DataProvider.java" />
@@ -185,11 +184,16 @@
         <option value="$PROJECT_DIR$/test/com/water/pos/parser/SecondHalfPriceParserTest.java" />
         <option value="$PROJECT_DIR$/test/com/water/pos/parser/GoodsParserTest.java" />
         <option value="$PROJECT_DIR$/test/com/water/pos/parser/ShoppingCartParserTest.java" />
-        <option value="$PROJECT_DIR$/src/com/water/pos/promotion/FullAmountDiscountPromotion.java" />
         <option value="$PROJECT_DIR$/src/com/water/pos/parser/SecondHalfPriceParser.java" />
-        <option value="$PROJECT_DIR$/test/com/water/pos/promotion/FullAmountDiscountPromotionTest.java" />
-        <option value="$PROJECT_DIR$/test/com/water/pos/promotion/PromotionStrategyTest.java" />
         <option value="$PROJECT_DIR$/test/com/water/pos/market/ShoppingCartTest.java" />
+        <option value="$PROJECT_DIR$/src/com/water/pos/promotion/DiscountPromotion.java" />
+        <option value="$PROJECT_DIR$/src/com/water/pos/promotion/FullAmountDiscountPromotion.java" />
+        <option value="$PROJECT_DIR$/src/com/water/pos/promotion/FullCashBackPromotion.java" />
+        <option value="$PROJECT_DIR$/src/com/water/pos/promotion/PromotionStrategy.java" />
+        <option value="$PROJECT_DIR$/test/com/water/pos/promotion/FullCashBackPromotionTest.java" />
+        <option value="$PROJECT_DIR$/test/com/water/pos/promotion/FullAmountDiscountPromotionTest.java" />
+        <option value="$PROJECT_DIR$/test/com/water/pos/promotion/DiscountPromotionTest.java" />
+        <option value="$PROJECT_DIR$/test/com/water/pos/promotion/PromotionStrategyTest.java" />
       </list>
     </option>
   </component>
@@ -222,6 +226,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -237,6 +243,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="PosSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PosSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PosSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="promotion" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -285,6 +313,32 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="promotion" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PosSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PosSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -302,8 +356,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -345,59 +397,8 @@
       <recent name="com.water.pos.parser" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in PosSystem">
-    <configuration default="false" name="All in PosSystem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="PosSystem" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="test in PosSystem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="PosSystem" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="PromotionStrategyTest.should_calculate_subtotal_correctly_when_many_promotions_given" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.PromotionStrategyTest.should_get_the_unchage_item_when_no_promotion_given">
+    <configuration default="false" name="FullCashBackPromotionTest.should_get_null_item_when_given_null_item" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.water.pos.promotion.*" />
@@ -408,8 +409,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.water.pos.promotion" />
-      <option name="MAIN_CLASS_NAME" value="com.water.pos.promotion.PromotionStrategyTest" />
-      <option name="METHOD_NAME" value="should_calculate_subtotal_correctly_when_many_promotions_given" />
+      <option name="MAIN_CLASS_NAME" value="com.water.pos.promotion.FullCashBackPromotionTest" />
+      <option name="METHOD_NAME" value="should_get_null_item_when_given_null_item" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -425,20 +426,104 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="ShoppingCartTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="PromotionStrategyTest.should_get_exactly_goods_promotions_when_many_promotions_given" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.water.pos.market.*" />
+          <option name="PATTERN" value="com.water.pos.promotion.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="PosSystem" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.water.pos.market" />
-      <option name="MAIN_CLASS_NAME" value="com.water.pos.market.ShoppingCartTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.water.pos.promotion" />
+      <option name="MAIN_CLASS_NAME" value="com.water.pos.promotion.PromotionStrategyTest" />
+      <option name="METHOD_NAME" value="should_get_exactly_goods_promotions_when_many_promotions_given" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="PromotionStrategyTest.should_calculate_get_null_item_when_given_the_null_item" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.water.pos.promotion.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="PosSystem" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.water.pos.promotion" />
+      <option name="MAIN_CLASS_NAME" value="com.water.pos.promotion.PromotionStrategyTest" />
+      <option name="METHOD_NAME" value="should_calculate_get_null_item_when_given_the_null_item" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="PromotionStrategyTest.should_calculate_get_null_item_when_given_one_illegal_promotion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.water.pos.promotion.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="PosSystem" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.water.pos.promotion" />
+      <option name="MAIN_CLASS_NAME" value="com.water.pos.promotion.PromotionStrategyTest" />
+      <option name="METHOD_NAME" value="should_calculate_get_null_item_when_given_one_illegal_promotion" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="PromotionStrategyTest.should_get_the_unchage_item_when_no_promotion_given" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.water.pos.promotion.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="PosSystem" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.water.pos.promotion" />
+      <option name="MAIN_CLASS_NAME" value="com.water.pos.promotion.PromotionStrategyTest" />
+      <option name="METHOD_NAME" value="should_get_the_unchage_item_when_no_promotion_given" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -1300,7 +1385,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="29">
+    <list size="30">
       <item index="0" class="java.lang.String" itemvalue="JUnit.GoodsListTest" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.GoodsListTest.should_add_goods_to_list_successfully_when_given_a_buffered_reader" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.GoodsListTest.should_get_null_goods_when_the_barcode_is_not_in_the_goods_list" />
@@ -1326,17 +1411,19 @@
       <item index="22" class="java.lang.String" itemvalue="JUnit.FullAmountDiscountPromotionTest" />
       <item index="23" class="java.lang.String" itemvalue="JUnit.FullCashBackPromotionTest" />
       <item index="24" class="java.lang.String" itemvalue="JUnit.DiscountParserTest" />
-      <item index="25" class="java.lang.String" itemvalue="JUnit.All in PosSystem" />
-      <item index="26" class="java.lang.String" itemvalue="JUnit.test in PosSystem" />
-      <item index="27" class="java.lang.String" itemvalue="JUnit.PromotionStrategyTest.should_calculate_subtotal_correctly_when_many_promotions_given" />
-      <item index="28" class="java.lang.String" itemvalue="JUnit.ShoppingCartTest" />
+      <item index="25" class="java.lang.String" itemvalue="JUnit.FullCashBackPromotionTest.should_get_null_item_when_given_null_item" />
+      <item index="26" class="java.lang.String" itemvalue="JUnit.PromotionStrategyTest.should_get_exactly_goods_promotions_when_many_promotions_given" />
+      <item index="27" class="java.lang.String" itemvalue="JUnit.PromotionStrategyTest.should_calculate_get_null_item_when_given_the_null_item" />
+      <item index="28" class="java.lang.String" itemvalue="JUnit.PromotionStrategyTest.should_calculate_get_null_item_when_given_one_illegal_promotion" />
+      <item index="29" class="java.lang.String" itemvalue="JUnit.PromotionStrategyTest.should_get_the_unchage_item_when_no_promotion_given" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.All in PosSystem" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ShoppingCartTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.PromotionStrategyTest.should_calculate_subtotal_correctly_when_many_promotions_given" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.test in PosSystem" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.PromotionStrategyTest.should_get_the_unchage_item_when_no_promotion_given" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.PromotionStrategyTest.should_calculate_get_null_item_when_given_one_illegal_promotion" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.PromotionStrategyTest.should_calculate_get_null_item_when_given_the_null_item" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.PromotionStrategyTest.should_get_exactly_goods_promotions_when_many_promotions_given" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.FullCashBackPromotionTest.should_get_null_item_when_given_null_item" />
       </list>
     </recent_temporary>
   </component>
@@ -1436,13 +1523,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="626">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="411">
@@ -1649,22 +1729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/water/pos/promotion/FullCashBackPromotionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/water/pos/promotion/DiscountPromotionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/water/pos/parser/DiscountParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
@@ -1699,7 +1763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="396">
           <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1743,82 +1806,115 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/water/pos/promotion/FullCashBackPromotion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="648">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/water/pos/promotion/IPromotion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/water/pos/promotion/DiscountPromotion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="468">
-          <caret line="19" column="97" selection-start-line="19" selection-start-column="97" selection-end-line="19" selection-end-column="97" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/water/pos/promotion/FullAmountDiscountPromotion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="630">
-          <caret line="30" column="55" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
-          <folding>
-            <element signature="e#339#340#0" expanded="true" />
-            <element signature="e#374#375#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/water/pos/parser/SecondHalfPriceParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
           <caret line="12" column="87" selection-start-line="12" selection-start-column="87" selection-end-line="12" selection-end-column="87" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/water/pos/market/ShoppingCartTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1674">
+          <caret line="29" column="56" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/java/jdk1.8.0_25/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32241812" vertical-offset="3634" max-vertical-offset="9666">
+          <caret line="234" column="18" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
+          <folding>
+            <element signature="e#10065#10066#0" expanded="false" />
+            <element signature="e#10148#10149#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/water/pos/promotion/FullCashBackPromotionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1026">
+          <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/water/pos/promotion/FullAmountDiscountPromotionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
-          <caret line="11" column="101" selection-start-line="11" selection-start-column="101" selection-end-line="11" selection-end-column="101" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="972">
+          <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/water/pos/promotion/PromotionStrategyTest.java">
+    <entry file="file://$PROJECT_DIR$/test/com/water/pos/promotion/DiscountPromotionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="540">
-          <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
-          <folding>
-            <element signature="e#968#994#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="12" max-vertical-offset="846">
+          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/water/pos/promotion/PromotionStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="232" max-vertical-offset="1062">
-          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1170">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <element signature="e#966#967#0" expanded="true" />
+            <element signature="e#1014#1015#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/water/pos/promotion/PromotionStrategyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="233" max-vertical-offset="1422">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="e#3776#3788#0" expanded="true" />
+            <element signature="e#3857#3869#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/water/pos/promotion/IPromotion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/water/pos/market/ShoppingCartTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/water/pos/promotion/FullCashBackPromotion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84375" vertical-offset="270" max-vertical-offset="1674">
-          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="174" max-vertical-offset="666">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/water/pos/promotion/FullAmountDiscountPromotion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="109" max-vertical-offset="666">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1040#1041#0" expanded="true" />
+            <element signature="e#1109#1110#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/water/pos/promotion/DiscountPromotion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4375" vertical-offset="102" max-vertical-offset="486">
+          <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
