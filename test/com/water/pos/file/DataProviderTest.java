@@ -19,8 +19,6 @@ public class DataProviderTest {
 
         List<String> strList = DataProvider.read(reader);
 
-        assertNotNull(strList);
-        assertThat(strList.size(), is(2));
         assertThat(strList.get(0), is("Hello ThoughtWorks"));
         assertThat(strList.get(1), is("I'm Waterstrong"));
     }

@@ -58,7 +58,6 @@ public class DiscountParserTest {
         Pair<String, IPromotion> promotionPair = discountParser.parse("ITEM000001:-1");
 
         assertNull(promotionPair);
-
     }
 
     @Test
@@ -66,6 +65,5 @@ public class DiscountParserTest {
         Pair<String, IPromotion> promotionPair = discountParser.parse("ITEM000001:101");
 
         assertNull(promotionPair);
-
     }
 }

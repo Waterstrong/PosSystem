@@ -22,7 +22,6 @@ public class FullCashBackPromotionTest {
 
         Item item = fullCashBackPromotion.calculate(globalItem);
 
-        assertNotNull(item);
         assertEquals(item.getSubtotal(), 300d-30, 0.00001);
     }
 

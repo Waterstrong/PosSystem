@@ -1,10 +1,7 @@
 package com.water.pos.promotion;
 
 import com.water.pos.common.Pair;
-import com.water.pos.file.DataProvider;
-import com.water.pos.file.DiscountFile;
 import com.water.pos.model.Item;
-import com.water.pos.parser.DataParser;
 
 import java.util.*;
 

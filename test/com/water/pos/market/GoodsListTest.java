@@ -19,11 +19,11 @@ public class GoodsListTest {
         GoodsList goodsList = new GoodsList();
         List<Goods> goodsCollection = new ArrayList<Goods>();
         goodsCollection.add(new Goods("ITEM000001", 40));
+        goodsCollection.add(new Goods("ITEM000002", 65));
 
         goodsList.add(goodsCollection);
         Goods goods = goodsList.getGoods("ITEM000001");
 
-        assertNotNull(goods);
         assertThat(goods.getBarcode(), is("ITEM000001"));
         assertEquals(goods.getPrice(), 40d, 0.00001);
     }

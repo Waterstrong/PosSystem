@@ -1,10 +1,7 @@
 package com.water.pos.market;
 
-import com.water.pos.file.GoodsFile;
 import com.water.pos.model.Goods;
-import com.water.pos.parser.GoodsParser;
 
-import java.io.BufferedReader;
 import java.util.HashMap;
 import java.lang.String;
 import java.util.Iterator;

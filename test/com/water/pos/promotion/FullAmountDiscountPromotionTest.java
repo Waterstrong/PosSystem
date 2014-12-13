@@ -20,7 +20,6 @@ public class FullAmountDiscountPromotionTest {
 
         Item item = fullAmountDiscountPromotion.calculate(globalItem);
 
-        assertNotNull(item);
         assertEquals(item.getSubtotal(), 50d+25+50+25+50, 0.00001);
     }
 
