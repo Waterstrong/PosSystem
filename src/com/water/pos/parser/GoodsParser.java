@@ -13,6 +13,8 @@ public class GoodsParser implements IParser<Goods> {
         if (line == null) return null;
         String[] splitResult = line.split(":"); // parse the line as product ( barcode : price )
         if (splitResult.length != 2) return null;
-        return new Goods(splitResult[0], Double.parseDouble(splitResult[1]));
+        double price = Double.parseDouble(splitResult[1]);
+        if (price < 0) return null;
+        return new Goods(splitResult[0], price);
     }
 }

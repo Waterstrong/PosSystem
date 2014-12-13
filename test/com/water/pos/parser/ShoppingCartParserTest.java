@@ -47,4 +47,18 @@ public class ShoppingCartParserTest {
     public void should_parse_number_format_exception_when_give_string_without_right_number() throws NumberFormatException {
         shoppingCartParser.parse("ITEM000005-3x");
     }
+
+    @Test
+    public void should_get_null_item_when_give_illegal_amount() throws Exception {
+        Item item = shoppingCartParser.parse("ITEM000005-0");
+
+        assertNull(item);
+    }
+
+    @Test
+    public void should_get_null_item_when_give_illegal_line_string() throws Exception {
+        Item item = shoppingCartParser.parse("ITEM000005-10-10");
+
+        assertNull(item);
+    }
 }

@@ -14,6 +14,8 @@ public class DiscountParser implements IParser<Pair<String, IPromotion>> {
         if (line == null) return null;
         String[] splitResult = line.split(":"); // parse the line as barcode : discount
         if (splitResult.length != 2) return null;
-        return new Pair<String, IPromotion>(splitResult[0], new DiscountPromotion(Double.parseDouble(splitResult[1])));
+        double discountRate = Double.parseDouble(splitResult[1]);
+        if (discountRate < 0 || discountRate > 100) return null;
+        return new Pair<String, IPromotion>(splitResult[0], new DiscountPromotion(discountRate));
     }
 }

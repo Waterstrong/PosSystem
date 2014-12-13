@@ -13,7 +13,10 @@ public class FullCashBackParser implements IParser<Pair<String, IPromotion>> {
         if (line == null) return null;
         String[] splitResult = line.split(":"); // parse the line as barcode : fullCash : backCash
         if (splitResult.length != 3) return null;
+        double fullCash = Double.parseDouble(splitResult[1]);
+        double cashBack = Double.parseDouble(splitResult[2]);
+        if (fullCash <= 0 || cashBack < 0) return null;
         return new Pair<String, IPromotion>(splitResult[0],
-                new FullCashBackPromotion(Double.parseDouble(splitResult[1]), Double.parseDouble(splitResult[2])));
+                new FullCashBackPromotion(fullCash, cashBack));
     }
 }

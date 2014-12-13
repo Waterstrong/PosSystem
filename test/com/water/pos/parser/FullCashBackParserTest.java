@@ -52,4 +52,18 @@ public class FullCashBackParserTest {
     public void should_parse_exception_when_give_string_without_right_number() throws NumberFormatException {
         fullCashBackParser.parse("ITEM000001:100x:y5");
     }
+
+    @Test
+    public void should_get_null_pair_when_give_illegal_full_cash() throws Exception {
+        Pair<String, IPromotion> promotionPair = fullCashBackParser.parse("ITEM000001:0:5");
+
+        assertNull(promotionPair);
+    }
+
+    @Test
+    public void should_get_null_pair_when_give_negative_cash_back() throws Exception {
+        Pair<String, IPromotion> promotionPair = fullCashBackParser.parse("ITEM000001:100:-1");
+
+        assertNull(promotionPair);
+    }
 }

@@ -43,6 +43,13 @@ public class GoodsParserTest {
         assertNull(goods);
     }
 
+    @Test
+    public void should_get_null_goods_when_give_negative_price() throws Exception {
+        Goods goods = goodsParser.parse("ITEM000001:-1");
+
+        assertNull(goods);
+    }
+
     @Test(expected = NumberFormatException.class)
     public void should_parse_number_format_exception_when_give_string_without_right_number() throws NumberFormatException {
         goodsParser.parse("ITEM000001:4b0");
