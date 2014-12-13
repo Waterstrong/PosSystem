@@ -10,7 +10,7 @@ public class ShoppingCartParser implements IParser<Item> {
     public Item parse(String line) {
         if (line == null) return null;
         String[] splitResult = line.split("-"); // parse the line as barcode : amount
-        if (splitResult.length != 1 || splitResult.length != 2) return null;
+        if (splitResult.length != 1 && splitResult.length != 2) return null;
         Integer amount = 1;
         if (splitResult.length == 2) {
             amount = Integer.parseInt(splitResult[1]);
