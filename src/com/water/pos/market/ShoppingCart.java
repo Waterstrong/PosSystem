@@ -1,11 +1,8 @@
 package com.water.pos.market;
 
-import com.water.pos.file.ShoppingCartFile;
 import com.water.pos.model.Item;
-import com.water.pos.parser.ShoppingCartParser;
 import com.water.pos.promotion.PromotionStrategy;
 
-import java.io.BufferedReader;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;

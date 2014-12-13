@@ -9,7 +9,7 @@ import java.util.*;
  * Created by water on 14-11-27.
  */
 public class PromotionStrategy {
-    private HashMap<String, List<IPromotion>> promotionMap = new HashMap<String, List<IPromotion>>();
+    private Map<String, List<IPromotion>> promotionMap = new HashMap<String, List<IPromotion>>();
     public Item calculate(final Item item) {
         if (item == null) return null;
         Item newItem = item;
