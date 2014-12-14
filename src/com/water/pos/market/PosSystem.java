@@ -13,7 +13,7 @@ public class PosSystem {
     public static void main (String[] args) {
         GoodsList goodsList = new GoodsList();
         try {
-            goodsList.add(DataParser.map(DataProvider.read(new FileStream(FilePath.GOODS_FILE).getBufferReader()), new GoodsParser()));
+            goodsList.add(DataParser.map(DataProvider.read(FilePath.GOODS_FILE), new GoodsParser()));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -21,7 +21,7 @@ public class PosSystem {
 
         ShoppingCart shoppingCart = new ShoppingCart(goodsList);
         try {
-            shoppingCart.add(DataParser.map(DataProvider.read(new FileStream(FilePath.SHOPPING_CART_FILE).getBufferReader()), new ShoppingCartParser()));
+            shoppingCart.add(DataParser.map(DataProvider.read(FilePath.SHOPPING_CART_FILE), new ShoppingCartParser()));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -29,9 +29,9 @@ public class PosSystem {
 
         PromotionStrategy promotionStrategy = new PromotionStrategy();
         try {
-            promotionStrategy.attach(DataParser.map(DataProvider.read(new FileStream(FilePath.DISCOUNT_FILE).getBufferReader()), new DiscountParser()));
-            promotionStrategy.attach(DataParser.map(DataProvider.read(new FileStream(FilePath.SECOND_HALF_PRICE_FILE).getBufferReader()), new SecondHalfPriceParser()));
-            promotionStrategy.attach(DataParser.map(DataProvider.read(new FileStream(FilePath.FULL_CASH_BACH_FILE).getBufferReader()), new FullCashBackParser()));
+            promotionStrategy.attach(DataParser.map(DataProvider.read(FilePath.DISCOUNT_FILE), new DiscountParser()));
+            promotionStrategy.attach(DataParser.map(DataProvider.read(FilePath.SECOND_HALF_PRICE_FILE), new SecondHalfPriceParser()));
+            promotionStrategy.attach(DataParser.map(DataProvider.read(FilePath.FULL_CASH_BACH_FILE), new FullCashBackParser()));
         } catch (Exception ex) {
             ex.printStackTrace();
         }

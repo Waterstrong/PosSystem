@@ -21,7 +21,7 @@ public class ShoppingCartTest {
     public void setUp() throws Exception {
         promotionStrategy = new PromotionStrategy();
         List<Pair<String, IPromotion>> promotionList = new ArrayList<Pair<String, IPromotion>>();
-        promotionList.add(new Pair<String, IPromotion>("ITEM000001",  new DiscountPromotion(75)));
+        promotionList.add(new Pair<String, IPromotion>("ITEM000001", new DiscountPromotion(75)));
         promotionList.add(new Pair<String, IPromotion>("ITEM000001", new FullAmountDiscountPromotion(2, 50)));
         promotionList.add(new Pair<String, IPromotion>("ITEM000001", new FullCashBackPromotion(100, 5)));
         promotionList.add(new Pair<String, IPromotion>("ITEM_TOTAL", new FullCashBackPromotion(300, 30)));
@@ -43,7 +43,6 @@ public class ShoppingCartTest {
         Map<String, Item> itemMap = shoppingCart.calculate(promotionStrategy);
         Item item = itemMap.get("ITEM000001");
 
-        assertNotNull(item);
         assertThat(item.getGoods().getBarcode(), is("ITEM000001"));
         assertEquals(item.getGoods().getPrice(), 80, 0.00001);
         assertThat(item.getAmount(), is(3));

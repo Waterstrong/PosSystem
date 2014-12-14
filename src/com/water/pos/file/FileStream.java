@@ -9,14 +9,14 @@ import java.io.InputStreamReader;
  * Created by water on 14-12-11.
  */
 public class FileStream {
-    private String filePath;
-    public FileStream(String filePath) {
-        this.filePath = filePath;
-    }
-    public BufferedReader getBufferReader() throws Exception {
-        File file = new File(filePath);
-        InputStreamReader inputStreamreader = new InputStreamReader(new FileInputStream(file));
-        BufferedReader bufferedReader = new BufferedReader(inputStreamreader);
-        return bufferedReader;
-    }
+//    private String filePath;
+//    public FileStream(String filePath) {
+//        this.filePath = filePath;
+//    }
+//    public BufferedReader getBufferReader() throws Exception {
+//        File file = new File(filePath);
+//        InputStreamReader inputStreamreader = new InputStreamReader(new FileInputStream(file));
+//        BufferedReader bufferedReader = new BufferedReader(inputStreamreader);
+//        return bufferedReader;
+//    }
 }

@@ -1,5 +1,6 @@
 package com.water.pos.file;
 
+import com.water.pos.common.FilePath;
 import org.junit.Test;
 
 import java.io.BufferedReader;
@@ -12,14 +13,10 @@ import static org.mockito.Mockito.when;
 
 public class DataProviderTest {
     @Test
-    public void should_read_data_list_successfully_when_give_buffered_reader() throws Exception {
-        BufferedReader reader = mock(BufferedReader.class);
-        when(reader.readLine()).thenReturn("Hello ThoughtWorks", "I'm Waterstrong");
-        when(reader.ready()).thenReturn(true, true, false);
+    public void should_read_data_list_successfully_when_give_file_path() throws Exception {
+        List<String> strList = DataProvider.read(FilePath.DISCOUNT_FILE);
 
-        List<String> strList = DataProvider.read(reader);
-
-        assertThat(strList.get(0), is("Hello ThoughtWorks"));
-        assertThat(strList.get(1), is("I'm Waterstrong"));
+        assertThat(strList.get(0), is("ITEM000001:75"));
+        assertThat(strList.get(1), is("ITEM000005:90"));
     }
 }
