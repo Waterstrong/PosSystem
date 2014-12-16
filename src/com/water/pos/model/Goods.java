@@ -16,7 +16,7 @@ public class Goods {
     public double getPrice() {
         return price;
     }
-    public String toString() {
-        return barcode+"    "+price;
-    }
+//    public String toString() {
+//        return barcode+"    "+price;
+//    }
 }

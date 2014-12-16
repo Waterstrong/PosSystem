@@ -19,7 +19,7 @@ public class Item {
     public double getSubtotal() {
         return amount * goods.getPrice();
     }
-    public String toString() {
-        return goods.toString() + "      " + amount;
-    }
+//    public String toString() {
+//        return goods.toString() + "      " + amount;
+//    }
 }
