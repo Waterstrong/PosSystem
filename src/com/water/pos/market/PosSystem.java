@@ -17,7 +17,7 @@ public class PosSystem {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        goodsList.showDetail();
+        //goodsList.showDetail();
 
         ShoppingCart shoppingCart = new ShoppingCart(goodsList);
         try {
@@ -25,7 +25,7 @@ public class PosSystem {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        shoppingCart.showDetail();
+        //shoppingCart.showDetail();
 
         PromotionStrategy promotionStrategy = new PromotionStrategy();
         try {
@@ -35,7 +35,7 @@ public class PosSystem {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        promotionStrategy.showPromotionDetail();
+        //promotionStrategy.showPromotionDetail();
 
         KkPos kkPosA = new KkPos();
         kkPosA.applyPrintSettlement(promotionStrategy, shoppingCart);

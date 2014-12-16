@@ -2,6 +2,7 @@ package com.water.pos.promotion;
 
 import com.water.pos.common.Pair;
 import com.water.pos.model.Item;
+import org.hamcrest.Matcher;
 import org.hamcrest.core.Is;
 import org.junit.Before;
 import org.junit.Test;
@@ -99,4 +100,23 @@ public class PromotionStrategyTest {
         assertThat(promotionArray.get(1), Is.<IPromotion>is(fullCashBackPromotion));
 
     }
+
+    @Test
+    public void should_get_item_promotions_when_given_the_item_barcode() throws Exception {
+        PromotionStrategy promotionStrategy = new PromotionStrategy();
+        List<Pair<String, IPromotion>> promotionPairList = new ArrayList<Pair<String, IPromotion>>();
+        DiscountPromotion discountPromotion = new DiscountPromotion(80);
+        FullAmountDiscountPromotion fullAmountDiscountPromotion = new FullAmountDiscountPromotion(2, 50);
+        promotionPairList.add(new Pair<String, IPromotion>("ITEM000001", discountPromotion));
+        promotionPairList.add(new Pair<String, IPromotion>("ITEM000001", fullAmountDiscountPromotion));
+        promotionStrategy.attach(promotionPairList);
+
+        List<IPromotion> promotionList = promotionStrategy.getPromotionsOfGoods("ITEM000001");
+
+        assertThat(promotionList.get(0), Is.<IPromotion>is(discountPromotion));
+        assertThat(promotionList.get(1), Is.<IPromotion>is(fullAmountDiscountPromotion));
+
+    }
+
+
 }

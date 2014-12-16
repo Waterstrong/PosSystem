@@ -41,22 +41,22 @@ public class PromotionStrategy {
             promotionMap.put(barcode, proList);
         }
     }
-    public void showPromotionDetail() {
-        Iterator<String> iter = promotionMap.keySet().iterator();
-        System.out.println("当前优惠促销活动：");
-        System.out.println("商品条码        商品优惠活动");
-        while (iter.hasNext()) {
-            String barcode = iter.next();
-            System.out.print(barcode + "    ");
-            Iterator<IPromotion> iterPro = promotionMap.get(barcode).iterator();
-            while (iterPro.hasNext()) {
-                IPromotion promotion = iterPro.next();
-                System.out.print(promotion.toString() + " | ");
-            }
-            System.out.println();
-        }
-
-    }
+//    public void showPromotionDetail() {
+//        Iterator<String> iter = promotionMap.keySet().iterator();
+//        System.out.println("当前优惠促销活动：");
+//        System.out.println("商品条码        商品优惠活动");
+//        while (iter.hasNext()) {
+//            String barcode = iter.next();
+//            System.out.print(barcode + "    ");
+//            Iterator<IPromotion> iterPro = promotionMap.get(barcode).iterator();
+//            while (iterPro.hasNext()) {
+//                IPromotion promotion = iterPro.next();
+//                System.out.print(promotion.toString() + " | ");
+//            }
+//            System.out.println();
+//        }
+//
+//    }
 
     //public void detach() {}
 }

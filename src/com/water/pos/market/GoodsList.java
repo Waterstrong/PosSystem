@@ -24,14 +24,14 @@ public class GoodsList {
         return goodsMap.get(barcode) ;
     }
 
-    public void showDetail() {
-        Iterator<String> iter = goodsMap.keySet().iterator();
-        System.out.println("商品基本信息：");
-        System.out.println("商品条码    商品单价");
-        while (iter.hasNext()) {
-            String barcode = iter.next();
-            Goods goods = goodsMap.get(barcode);
-            System.out.println(goods.toString());
-        }
-    }
+//    public void showDetail() {
+//        Iterator<String> iter = goodsMap.keySet().iterator();
+//        System.out.println("商品基本信息：");
+//        System.out.println("商品条码    商品单价");
+//        while (iter.hasNext()) {
+//            String barcode = iter.next();
+//            Goods goods = goodsMap.get(barcode);
+//            System.out.println(goods.toString());
+//        }
+//    }
 }

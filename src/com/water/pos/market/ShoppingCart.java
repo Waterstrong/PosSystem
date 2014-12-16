@@ -60,16 +60,16 @@ public class ShoppingCart {
         }
     }
 
-    public void showDetail() {
-        Iterator<String> iter = cartMap.keySet().iterator();
-        System.out.println("购物车信息：");
-        System.out.println("商品条码    商品单价    购买数量");
-        while (iter.hasNext()) {
-            String barcode = iter.next();
-            Item item = cartMap.get(barcode);
-            System.out.println(item.toString());
-        }
-    }
+//    public void showDetail() {
+//        Iterator<String> iter = cartMap.keySet().iterator();
+//        System.out.println("购物车信息：");
+//        System.out.println("商品条码    商品单价    购买数量");
+//        while (iter.hasNext()) {
+//            String barcode = iter.next();
+//            Item item = cartMap.get(barcode);
+//            System.out.println(item.toString());
+//        }
+//    }
 
 
 }
