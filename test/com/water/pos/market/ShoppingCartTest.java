@@ -13,18 +13,23 @@ import java.util.Map;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
+import static org.mockito.BDDMockito.given;
+import static org.mockito.Matchers.anyObject;
+import static org.mockito.Mockito.mock;
 
 public class ShoppingCartTest {
     PromotionStrategy promotionStrategy;
     GoodsList goodsList;
+    IPromotion promotion;
     @Before
     public void setUp() throws Exception {
         promotionStrategy = new PromotionStrategy();
+        promotion = mock(IPromotion.class);
         List<Pair<String, IPromotion>> promotionList = new ArrayList<Pair<String, IPromotion>>();
-        promotionList.add(new Pair<String, IPromotion>("ITEM000001", new DiscountPromotion(75)));
-        promotionList.add(new Pair<String, IPromotion>("ITEM000001", new FullAmountDiscountPromotion(2, 50)));
-        promotionList.add(new Pair<String, IPromotion>("ITEM000001", new FullCashBackPromotion(100, 5)));
-        promotionList.add(new Pair<String, IPromotion>("ITEM_TOTAL", new FullCashBackPromotion(300, 30)));
+        promotionList.add(new Pair<String, IPromotion>("ITEM000001", promotion)); // new DiscountPromotion(75)
+        promotionList.add(new Pair<String, IPromotion>("ITEM000001", promotion)); // new FullAmountDiscountPromotion(2, 50)
+        promotionList.add(new Pair<String, IPromotion>("ITEM000001", promotion)); // new FullCashBackPromotion(100, 5)
+        promotionList.add(new Pair<String, IPromotion>("ITEM_TOTAL", promotion)); // new FullCashBackPromotion(300, 30)
         promotionStrategy.attach(promotionList);
         goodsList = new GoodsList();
         List<Goods> goodsArray = new ArrayList<Goods>();
@@ -39,6 +44,7 @@ public class ShoppingCartTest {
         List<Item> itemList = new ArrayList<Item>();
         itemList.add(new Item("ITEM000001", 0, 3));
         shoppingCart.add(itemList);
+        given(promotion.calculate((Item) anyObject())).willReturn(new Item("ITEM000001", 80 , 3));
 
         Map<String, Item> itemMap = shoppingCart.calculate(promotionStrategy);
         Item item = itemMap.get("ITEM000001");
@@ -54,6 +60,7 @@ public class ShoppingCartTest {
         List<Item> itemList = new ArrayList<Item>();
         itemList.add(new Item("ITEM000001", 0, 1 ));
         shoppingCart.add(itemList);
+        given(promotion.calculate((Item) anyObject())).willReturn(new Item("ITEM000001", 80, 1));
 
         shoppingCart.calculate(promotionStrategy);
 
@@ -67,6 +74,7 @@ public class ShoppingCartTest {
         itemList.add(new Item("ITEM000001", 0, 5 ));
         itemList.add(new Item("ITEM000002", 0, 1));
         shoppingCart.add(itemList);
+        given(promotion.calculate((Item) anyObject())).willReturn(new Item("ITEM000001", 305, 1));
 
         shoppingCart.calculate(promotionStrategy);
 
@@ -79,6 +87,7 @@ public class ShoppingCartTest {
         List<Item> itemList = new ArrayList<Item>();
         itemList.add(new Item("ITEM000001", 0, 5 ));
         shoppingCart.add(itemList);
+        given(promotion.calculate((Item)anyObject())).willReturn(new Item("ITEM000001", 235, 1));
 
         shoppingCart.calculate(promotionStrategy);
 
