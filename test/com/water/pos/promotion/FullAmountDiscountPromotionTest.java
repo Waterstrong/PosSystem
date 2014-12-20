@@ -16,36 +16,36 @@ public class FullAmountDiscountPromotionTest {
 
     @Test
     public void should_calculate_promotion_correctly_when_given_full_amount_and_discount_rate_args() throws Exception {
-        FullAmountDiscountPromotion fullAmountDiscountPromotion = new FullAmountDiscountPromotion(2, 50);
+        IPromotion promotion =  new FullAmountDiscountPromotion(2, 50);
 
-        Item item = fullAmountDiscountPromotion.calculate(globalItem);
+        Item item = promotion.calculate(globalItem);
 
         assertEquals(item.getSubtotal(), 50d+25+50+25+50, 0.00001);
     }
 
     @Test
     public void should_calculate_method_get_null_item_when_given_the_negative_discount_rate() throws Exception {
-        FullAmountDiscountPromotion fullAmountDiscountPromotion = new FullAmountDiscountPromotion(2, -1);
+        IPromotion promotion = new FullAmountDiscountPromotion(2, -1);
 
-        Item item = fullAmountDiscountPromotion.calculate(globalItem);
+        Item item = promotion.calculate(globalItem);
 
         assertNull(item);
     }
 
     @Test
     public void should_calculate_method_get_null_item_when_given_the_illegal_full_amount() throws Exception {
-        FullAmountDiscountPromotion fullAmountDiscountPromotion = new FullAmountDiscountPromotion(0, 50);
+        IPromotion promotion = new FullAmountDiscountPromotion(0, 50);
 
-        Item item = fullAmountDiscountPromotion.calculate(globalItem);
+        Item item = promotion.calculate(globalItem);
 
         assertNull(item);
     }
 
     @Test
     public void should_calculate_method_get_null_item_when_given_the_null_item() throws Exception {
-        FullAmountDiscountPromotion fullAmountDiscountPromotion = new FullAmountDiscountPromotion(2, 50);
+        IPromotion promotion = new FullAmountDiscountPromotion(2, 50);
 
-        Item item = fullAmountDiscountPromotion.calculate(null);
+        Item item = promotion.calculate(null);
 
         assertNull(item);
 
