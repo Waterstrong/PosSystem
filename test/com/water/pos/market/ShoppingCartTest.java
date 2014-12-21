@@ -31,7 +31,7 @@ public class ShoppingCartTest {
         promotionList.add(new Pair<String, IPromotion>("ITEM000001", promotion)); // new FullCashBackPromotion(100, 5)
         promotionList.add(new Pair<String, IPromotion>("ITEM_TOTAL", promotion)); // new FullCashBackPromotion(300, 30)
         promotionStrategy.attach(promotionList);
-        goodsList = new GoodsList();
+        goodsList = GoodsList.getInstance();
         List<Goods> goodsArray = new ArrayList<Goods>();
         goodsArray.add(new Goods("ITEM000001", 80));
         goodsArray.add(new Goods("ITEM000002", 100));

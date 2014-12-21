@@ -16,7 +16,7 @@ public class PosSystem {
 /*
         Injector injector = Guice.createInjector();
 
-        GoodsList goodsList = new GoodsList();
+        GoodsList goodsList = GoodList.getInstance();
         try {
             goodsList.add(DataParser.map(DataProvider.read(FilePath.GOODS_FILE), injector.getInstance(GoodsParser.class))); // new GoodsParser()
         } catch (Exception e) {

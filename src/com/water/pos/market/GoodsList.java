@@ -11,7 +11,13 @@ import java.util.Map;
 /**
  * Created by water on 14-11-21.
  */
-public class GoodsList {
+public final class GoodsList {
+    private final static GoodsList instance = new GoodsList();
+    private GoodsList(){}
+    public static GoodsList getInstance() {
+        return instance;
+    }
+
     private Map<String, Goods> goodsMap = new HashMap<String, Goods>();
 
     public void add(List<Goods> goodsList) {
