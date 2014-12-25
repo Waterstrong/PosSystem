@@ -3,6 +3,7 @@ package com.water.pos.file;
 import com.water.pos.common.FilePath;
 import org.junit.Test;
 
+import javax.annotation.processing.FilerException;
 import java.io.BufferedReader;
 import java.util.List;
 
@@ -18,5 +19,10 @@ public class DataProviderTest {
 
         assertThat(strList.get(0), is("ITEM000001:75"));
         assertThat(strList.get(1), is("ITEM000005:90"));
+    }
+
+    @Test(expected = Exception.class)
+    public void should_get_exception_when_give_wrong_file() throws Exception {
+        DataProvider.read(FilePath.UNKNOW_FILE);
     }
 }

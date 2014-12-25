@@ -66,6 +66,18 @@ public class DataParserTest {
         assertThat(result.get(1), is("mapped2"));
     }
 
+    @Test
+    public void should_get_null_when_give_null() throws Exception {
+        //given
+        ArrayList<String> inputs = new ArrayList<String>();
+        inputs.add(null);
+
+        //when
+
+        //then
+        assertNull(DataParser.map(inputs, new StubIdentityParser()));
+
+    }
 
     public class StubIdentityParser implements IParser<String> {
 

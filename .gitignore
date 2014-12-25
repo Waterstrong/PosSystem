@@ -3,7 +3,6 @@
 *.iws
 *.ids
 *.log
-orderNumber.txt
 /target/
 .idea/
 classes/
@@ -16,11 +15,9 @@ out/
 bin/
 release/build/*
 release/cache
-/src/main/webapp/views/node_modules/
 */**/tabbar.tmpl.js
 .classpath
 .project
-src/main/webapp/views/scripts/
 node_modules/
 bower_components/
 */**/.tmp
@@ -29,6 +26,3 @@ bower_components/
 .tmp/
 **/*.log
 **/*.log.*
-ecommercial/src/main/webapp/views/htmlUI/site/Test.html
-weixin/src/main/webapp/pages
-
